@@ -145,3 +145,14 @@ Feel free to add your own creative touches for bonus points:
 - Additional character classes beyond the three required
 - More weapon types with different properties
 - Enhanced special abilities with unique effects
+
+
+
+Bonus Creative Features: Did you add anything unique?
+I added 3 new classes being archer druid and paladin.
+
+AI Usage: What AI assistance did you use and where?
+I used chat gpt throughtout to look over syntax errors and to make sure that the bonus features didnt interupt the test cases
+
+How to Run: Clear instructions for testing your code
+Save all class definitions in a Python file (e.g., character_classes.py) and open a terminal in that folder. Run the file with python character_classes.py. In the if __name__ == "__main__": section, create objects for each character type, display their stats, test attacks and special abilities, and optionally run the SimpleBattle system. The terminal output will show stats, actions, and battle results, confirming that your classes and inheritance work correctly.
