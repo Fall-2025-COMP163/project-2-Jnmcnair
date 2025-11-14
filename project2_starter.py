@@ -3,8 +3,8 @@ COMP 163 - Project 2: Character Abilities Showcase
 Name: Jonathan McNair
 Date: 11/14/25
 
-AI Usage: [Document any AI assistance used]
-Example: AI helped with inheritance structure and method overriding concepts
+AI Usage: Chat GPT was used for minor syntax errors throughout the entire code and to make sure the bonus content didnt mess up the test cases
+
 """
 import random
 # ============================================================================
@@ -247,6 +247,70 @@ class Weapon:
         """
         print(f"Weapon: {self.name}")
         print(f"Damage Bonus: {self.damage_bonus}")
+
+# -----------------------------------------------------------
+# Bonus class 1: Archer (inherits from Character)
+# -----------------------------------------------------------
+class Archer(Character):
+    """
+    Archer extends Character and adds a ranged attack ability.
+    """
+
+    def __init__(self, name, health, arrows):
+        super().__init__(name, health)
+        self.arrows = arrows
+
+    def shoot_arrow(self):
+        if self.arrows > 0:
+            print(f"{self.name} shoots an arrow!")
+            self.arrows -= 1
+        else:
+            print(f"{self.name} has no arrows left!")
+
+# -----------------------------------------------------------
+# Bonus class 2: Paladin (inherits from Character)
+# -----------------------------------------------------------
+
+class Paladin(Character):
+    """
+    Paladin inherits from Character.
+    Adds holy power and a heal ability.
+    """
+
+    def __init__(self, name, health, holy_power):
+        super().__init__(name, health)
+        self.holy_power = holy_power
+
+    def heal(self):
+        if self.holy_power >= 5:
+            print(f"{self.name} uses holy magic to heal!")
+            self.health += 20
+            self.holy_power -= 5
+        else:
+            print(f"{self.name} lacks holy power!")
+
+
+# -----------------------------------------------------------
+# Bonus class 3: Druid (inherits from Character)
+# -----------------------------------------------------------
+
+class Druid(Character):
+    """
+    Druid inherits from Character.
+    Has nature energy and can shapeshift.
+    """
+
+    def __init__(self, name, health, nature_energy):
+        super().__init__(name, health)
+        self.nature_energy = nature_energy
+
+    def shapeshift(self):
+        if self.nature_energy >= 8:
+            print(f"{self.name} shapeshifts into a bear!")
+            self.nature_energy -= 8
+        else:
+            print(f"{self.name} does not have enough nature energy!")
+
 
 # ============================================================================
 # MAIN PROGRAM FOR TESTING (YOU CAN MODIFY THIS FOR TESTING)
